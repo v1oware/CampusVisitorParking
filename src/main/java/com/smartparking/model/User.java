@@ -39,7 +39,9 @@ class Car{
         this.licensePlate = licensePlate;
     }
 
-    Car(String licensePlate) {}
+    public Car(String licensePlate) {
+        this.licensePlate = licensePlate;
+    }
 
     public int getWaitingPosition(Queue<Car> queue ){
         QueueNode<Car> line = queue.getTop();

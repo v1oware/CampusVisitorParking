@@ -31,7 +31,7 @@ public class ParkingLot {
     /*
     返回当前空位
      */
-    int getStatus(){
+    public int getStatus(){
         return MAXSIZE - parkingLot.getSize();
     }
 

@@ -14,6 +14,10 @@ public class QueueNode<E>{
         return this.data;
     }
 
+    public void setNext(QueueNode<E> next){
+        this.next = next;
+    }
+
     public void setPosition(int pos){
         this.position = pos;
     }

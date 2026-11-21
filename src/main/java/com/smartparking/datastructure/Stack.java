@@ -15,13 +15,15 @@ public class Stack<E> {
         return top == null;
     }
 
-    public void push(E e){
+    public boolean push(E e){
         if (size < maxsize) {
             var node  = new StackNode<>(e);
             node.next = top;
             top = node;
             size++;
-        }
+            return true;
+        }else return false;
+
     }
 
     public E pop(){

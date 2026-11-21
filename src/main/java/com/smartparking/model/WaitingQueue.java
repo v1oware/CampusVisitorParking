@@ -10,7 +10,7 @@ public class WaitingQueue {
     /*
     获取排队总数
      */
-    int getStatus(){
+    public int getStatus(){
         return  queue.getSize();
     }
 
