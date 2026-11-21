@@ -45,5 +45,10 @@ public class Stack<E> {
     public int getSize() {
         return size;
     }
+
+    public boolean isFull(){
+        return size == maxsize;
+    }
+
 }
 

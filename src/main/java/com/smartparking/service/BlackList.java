@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class BlackList {
 
-    private ArrayList<Car> carList;
+    private ArrayList<Car> carList = null;
 
     public ArrayList<Car> getCarList() {
         return carList;
