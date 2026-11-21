@@ -23,6 +23,11 @@ public class Car{
         return Objects.equals(licensePlate, car.licensePlate);
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(licensePlate);
+    }
+
     public Car(String licensePlate) {
         this.licensePlate = licensePlate;
     }
