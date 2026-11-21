@@ -26,8 +26,8 @@ public class Queue<E> {
 
     public void EnterQueue(E e){
         var temp = new QueueNode<>(e);
-        temp.setNext(top);
-        top = temp;
+        tail.setNext(temp);
+        tail = temp;
         tail.setPosition(getSize() + 1);
         if (isEmpty()) {
             top = tail;

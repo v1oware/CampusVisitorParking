@@ -10,7 +10,7 @@ import com.smartparking.datastructure.StackNode;
  */
 public class ParkingLot {
     private final int MAXSIZE = 20;
-    Stack<StackNode<Car>> parkingLot = new Stack<>(MAXSIZE);
+    Stack<Car> parkingLot = new Stack<>(MAXSIZE);
 
     /*
     停车场抬杆

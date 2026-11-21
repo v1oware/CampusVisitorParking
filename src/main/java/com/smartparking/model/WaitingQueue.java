@@ -5,7 +5,7 @@ import com.smartparking.datastructure.QueueNode;
 
 public class WaitingQueue {
 
-    Queue<QueueNode<Car>> queue = new Queue<>();
+    Queue<Car> queue = new Queue<>();
 
     /*
     获取排队总数
@@ -17,7 +17,7 @@ public class WaitingQueue {
     /*
     获取排队位数
      */
-    int getWaitingQueueStatus(QueueNode<Car> node){
+    public int getWaitingQueueStatus(QueueNode<Car> node){
         return node.getPosition();
     }
 

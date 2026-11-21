@@ -18,7 +18,7 @@ public class Stack<E> {
     public boolean push(E e){
         if (size < maxsize) {
             var node  = new StackNode<>(e);
-            node.next = top;
+            node.setNext(top);
             top = node;
             size++;
             return true;
@@ -32,9 +32,9 @@ public class Stack<E> {
         }
 
         var node = top;
-        top = node.next;
+        top = node.getNext();
         size--;
-        return  node.data;
+        return node.getData();
     }
 
     public void clear(){
