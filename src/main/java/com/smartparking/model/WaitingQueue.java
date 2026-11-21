@@ -5,11 +5,15 @@ import com.smartparking.datastructure.QueueNode;
 
 public class WaitingQueue {
 
-    Queue<Car> queue = new Queue<>();
+    private Queue<Car> queue = new Queue<>();
+
+    public Queue<Car> getQueue() {
+        return queue;
+    }
 
     /*
-    获取排队总数
-     */
+        获取排队总数
+         */
     public int getStatus(){
         return  queue.getSize();
     }

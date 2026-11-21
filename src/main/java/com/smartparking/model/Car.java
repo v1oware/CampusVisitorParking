@@ -16,6 +16,13 @@ public class Car{
         this.licensePlate = licensePlate;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return Objects.equals(licensePlate, car.licensePlate);
+    }
+
     public Car(String licensePlate) {
         this.licensePlate = licensePlate;
     }

@@ -26,12 +26,15 @@ public class Queue<E> {
 
     public void EnterQueue(E e){
         var temp = new QueueNode<>(e);
-        tail.setNext(temp);
-        tail = temp;
-        tail.setPosition(getSize() + 1);
+
         if (isEmpty()) {
+            tail = temp;
             top = tail;
+        }else{
+            tail.setNext(temp);
+            tail = temp;
         }
+        tail.setPosition(getSize() + 1);
         size++;
     }
 
