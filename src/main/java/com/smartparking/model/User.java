@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.Objects;
 import com.smartparking.datastructure.*;
 
-abstract class User {
+public abstract class User {
     String account;
     String password;
     String name;

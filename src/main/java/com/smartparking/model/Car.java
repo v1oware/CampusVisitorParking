@@ -3,10 +3,17 @@ package com.smartparking.model;
 import com.smartparking.datastructure.Queue;
 import com.smartparking.datastructure.QueueNode;
 
+import java.util.Date;
 import java.util.Objects;
 
 public class Car{
     private String licensePlate;
+    private Date entryTime = null;
+    private Date exitTime = null;
+
+    public Car(String licensePlate) {
+        this.licensePlate = licensePlate;
+    }
 
     public String getLicensePlate() {
         return licensePlate;
@@ -14,6 +21,22 @@ public class Car{
 
     public void setLicensePlate(String licensePlate) {
         this.licensePlate = licensePlate;
+    }
+
+    public Date getEntryTime() {
+        return entryTime;
+    }
+
+    public void setEntryTime(Date entryTime) {
+        this.entryTime = entryTime;
+    }
+
+    public Date getExitTime() {
+        return exitTime;
+    }
+
+    public void setExitTime(Date exitTime) {
+        this.exitTime = exitTime;
     }
 
     @Override
@@ -28,18 +51,18 @@ public class Car{
         return Objects.hashCode(licensePlate);
     }
 
-    public Car(String licensePlate) {
-        this.licensePlate = licensePlate;
+    /**
+     *获取车辆排队等待名次
+     */
+    public int getWaitingPosition(Queue<Car> queue){
+        return -1;
     }
 
-    public int getWaitingPosition(Queue<Car> queue ){
-        QueueNode<Car> line = queue.getTop();
-        while (line != null) {
-            if(Objects.equals(this,line.getData())){
-                return line.getPosition();
-            }
-            line =  line.getNext();
-        }
+    /**
+     *获取车辆停靠时间，以便统计和收费
+     *按停靠小时算，不满一小时的部分记为一小时
+     */
+    public int getStoppingHour(){
         return -1;
     }
 }

@@ -11,14 +11,14 @@ public class WaitingQueue {
         return queue;
     }
 
-    /*
-        获取排队总数
-         */
+    /**
+     获取排队总数
+     */
     public int getStatus(){
         return  queue.getSize();
     }
 
-    /*
+    /**
     获取排队位数
      */
     public int getWaitingQueueStatus(QueueNode<Car> node){
