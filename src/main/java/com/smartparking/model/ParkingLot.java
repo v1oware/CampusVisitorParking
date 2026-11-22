@@ -14,7 +14,7 @@ public class ParkingLot {
     private int gateSituation = 0;
     private final int UP = 1;
     private final int DOWN = 0;
-    private int MAXSIZE = 20;
+    private final int MAXSIZE = 20;
     public Stack<Car> parkingLot = new Stack<>(MAXSIZE);
 
 
@@ -26,11 +26,6 @@ public class ParkingLot {
     public int getMAXSIZE() {
         return MAXSIZE;
     }
-
-    public void setMaxSize(int maxSize) {
-        this.MAXSIZE = maxSize;
-    }
-
 
     public void setGateSituation(int gateSituation) {
         this.gateSituation = gateSituation;

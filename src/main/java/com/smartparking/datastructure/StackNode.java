@@ -13,7 +13,7 @@ public class StackNode<E>{
         return next;
     }
 
-    public void setNext(StackNode<E> next) {
+    protected void setNext(StackNode<E> next) {
         this.next = next;
     }
 
@@ -21,7 +21,7 @@ public class StackNode<E>{
         return data;
     }
 
-    public void setData(E data) {
+    protected void setData(E data) {
         this.data = data;
     }
 }

@@ -16,6 +16,24 @@ public class Stack<E> {
         }
     }
 
+    public int getMaxsize() {
+        return maxsize;
+    }
+
+
+    /**
+     *给已构造的stack扩容
+     *如果给定数字比目前已有数据小，不能更改
+     * 如果数字大于等于元素数量，可以更改
+     */
+    public boolean setMaxsize(int maxsize) {
+        if(maxsize < this.size){
+            return false;
+        }
+        this.maxsize = maxsize;
+        return true;
+    }
+
     public  boolean isEmpty(){
         return top == null;
     }
@@ -25,6 +43,9 @@ public class Stack<E> {
     }
 
     public boolean push(E e){
+        if(e == null){
+            return false;
+        }
         if (size < maxsize) {
             var node  = new StackNode<>(e);
             node.setNext(top);
@@ -57,7 +78,7 @@ public class Stack<E> {
 
     public boolean isFull(){
         if(maxsize == 0){
-            return false;
+            return true;
         }
         return size == maxsize;
     }
