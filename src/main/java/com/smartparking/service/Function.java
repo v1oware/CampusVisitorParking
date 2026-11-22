@@ -2,6 +2,7 @@ package com.smartparking.service;
 
 
 import com.smartparking.model.Car;
+import com.smartparking.model.ParkingLot;
 
 public class Function {
 
@@ -42,8 +43,8 @@ public class Function {
     /**
      * 获取单位费用
      */
-    public void getUnitCost(int unitCost){
-        this.UnitCost = unitCost;
+    public int getUnitCost(){
+        return  this.UnitCost;
     }
 
     /**
@@ -52,5 +53,6 @@ public class Function {
     public int getStoppingCost(Car car){
         return car.getStoppingHour()*this.UnitCost;
     }
+
 
 }

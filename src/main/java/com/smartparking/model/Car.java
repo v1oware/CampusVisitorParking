@@ -52,13 +52,6 @@ public class Car{
     }
 
     /**
-     *获取车辆排队等待名次
-     */
-    public int getWaitingPosition(Queue<Car> queue){
-        return -1;
-    }
-
-    /**
      *获取车辆停靠时间，以便统计和收费
      *按停靠小时算，不满一小时的部分记为一小时
      */
