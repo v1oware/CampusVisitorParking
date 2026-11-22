@@ -1,4 +1,4 @@
 package com.smartparking.util;
 
-public class AdminList {
+public class CarListJson {
 }

@@ -7,12 +7,21 @@ public class Stack<E> {
     private int size = 0;
 
     public Stack(int maxsize){
-        top = null;
-        this.maxsize = maxsize;
+        if (!(maxsize > 0)) {
+
+            top = null;
+            this.maxsize = 0;
+        }else{
+            this.maxsize = maxsize;
+        }
     }
 
     public  boolean isEmpty(){
         return top == null;
+    }
+
+    public StackNode<E>  getTop(){
+        return top;
     }
 
     public boolean push(E e){
@@ -47,6 +56,9 @@ public class Stack<E> {
     }
 
     public boolean isFull(){
+        if(maxsize == 0){
+            return false;
+        }
         return size == maxsize;
     }
 

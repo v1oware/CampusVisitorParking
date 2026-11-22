@@ -1,4 +1,4 @@
 package com.smartparking.util;
 
-public class StaffList {
+public class AdminListJson {
 }

@@ -11,16 +11,16 @@ public class Car{
     private Date entryTime = null;
     private Date exitTime = null;
 
+    /**
+     *调用构造方法前验证车牌是否已有对应car类
+     * 并且过滤非期望格式
+     */
     public Car(String licensePlate) {
         this.licensePlate = licensePlate;
     }
 
     public String getLicensePlate() {
         return licensePlate;
-    }
-
-    public void setLicensePlate(String licensePlate) {
-        this.licensePlate = licensePlate;
     }
 
     public Date getEntryTime() {

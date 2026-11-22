@@ -22,6 +22,10 @@ public class WaitingQueue {
     获取排队位数
      */
     public int getWaitingQueueStatus(QueueNode<Car> node){
+        if(node==null){
+            return -1;
+        }
+
         return node.getPosition();
     }
 

@@ -1,4 +1,4 @@
 package com.smartparking.util;
 
-public class AppointmentList {
+public class VisitorListJson {
 }

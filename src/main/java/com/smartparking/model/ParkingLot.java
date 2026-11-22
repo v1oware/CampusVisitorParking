@@ -9,22 +9,28 @@ import com.smartparking.datastructure.Stack;
  */
 public class ParkingLot {
 
-    protected class Camera{
-
-        String OCRLicensePlate(String LP){
-            return LP;
-        }
-
-    }
-
-
-    Camera cFront = new Camera() ;
-    Camera cBack  = new Camera() ;
+    private Camera cFront;
+    private Camera cBack;
     private int gateSituation = 0;
     private final int UP = 1;
     private final int DOWN = 0;
-    private final int MAXSIZE = 20;
-    Stack<Car> parkingLot = new Stack<>(MAXSIZE);
+    private int MAXSIZE = 20;
+    public Stack<Car> parkingLot = new Stack<>(MAXSIZE);
+
+
+    public ParkingLot(Camera cFront, Camera cBack) {
+        this.cFront = cFront;
+        this.cBack = cBack;
+    }
+
+    public int getMAXSIZE() {
+        return MAXSIZE;
+    }
+
+    public void setMaxSize(int maxSize) {
+        this.MAXSIZE = maxSize;
+    }
+
 
     public void setGateSituation(int gateSituation) {
         this.gateSituation = gateSituation;
@@ -37,14 +43,14 @@ public class ParkingLot {
     /**
     抬杆状态设置为1
      */
-    static void liftUp(){
+    public void liftUp(){
 
     }
 
     /**
      落杆状态设置为0
      */
-    static void liftDown(){
+    public void liftDown(){
 
     }
 
