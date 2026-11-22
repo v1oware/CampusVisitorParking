@@ -55,7 +55,20 @@ public class Car{
      *获取车辆停靠时间，以便统计和收费
      *按停靠小时算，不满一小时的部分记为一小时
      */
-    public int getStoppingHour(){
-        return -1;
+    public long getStoppingHour(){
+        long ONE_HOUR_MILLIS = 3600_000L;
+        if (entryTime == null || exitTime == null) {
+            return -1;
+        }
+
+        long diffMillis = Math.abs(exitTime.getTime() - entryTime.getTime());
+
+        // 相同时刻，返回 0
+        if (diffMillis == 0) {
+            return 0L;
+        }
+
+        // 向上取整：(diff + 3600000 - 1) / 3600000
+        return (diffMillis + ONE_HOUR_MILLIS - 1) / ONE_HOUR_MILLIS;
     }
 }

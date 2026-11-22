@@ -51,7 +51,7 @@ public class Function {
      *停车费用
      */
     public int getStoppingCost(Car car){
-        return car.getStoppingHour()*this.UnitCost;
+        return (int)car.getStoppingHour()*this.UnitCost;
     }
 
 

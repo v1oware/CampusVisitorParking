@@ -13,7 +13,7 @@ public class ParkingManager {
      *抬杆
      *当cBack获取到刚才的车牌，落杆
      */
-    public boolean enter(ParkingLot parkingLot){
+    public boolean enter(ParkingLot parkingLot, String licensePlate) {
         return false;
     }
 
@@ -26,7 +26,7 @@ public class ParkingManager {
      * 当cFront识别到刚才的车牌
      * 落杆
      */
-    public void leave(ParkingLot parkingLot){
+    public void leave(ParkingLot parkingLot, String licensePlate) {
 
     }
 
